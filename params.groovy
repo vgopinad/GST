@@ -4,8 +4,8 @@ node{
     deleteDir()
     
     def name=params.name1
-    print "value from jennkin ${name}"
-   
+    print "value from jennkin ${name}"   
+    checkout scm   
     config= readYaml file: "config/app.yml"
     
     def urlValue=config.url.create_org
