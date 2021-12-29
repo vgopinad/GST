@@ -7,7 +7,7 @@ node{
     def name=params.name1
     print "value from jennkin ${name}"   
     
-    urlValue=config.URl.create_org
+    def urlValue=config.create_org
     
     print "urlValue: ${urlValue}"
         
