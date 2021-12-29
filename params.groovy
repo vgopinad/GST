@@ -2,15 +2,14 @@ node{
   stage("preload the parameters") {
         
     deleteDir()
-    
+    checkout scm   
+    config= readYaml file: "config/app.yml"    
     def name=params.name1
     print "value from jennkin ${name}"   
-    checkout scm   
-    config= readYaml file: "config/app.yml"
     
-    def urlValue=config.url.create_org
+    def urlValue=config.URl.create_org
     
-    print "urlValue: ${urlValue} "
+    print "urlValue: ${urlValue}"
         
         }
   
